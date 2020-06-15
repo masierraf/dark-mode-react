@@ -1,0 +1,47 @@
+/* switch */
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .switch::before {
+  transform: translateX(40px);
+}
+
+.switch {
+  height: 40px;
+  display: block;
+  border-radius: 20px;
+  background: var(--gray);
+  width: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--switch-toggle);
+  border-radius: 50%;
+  transform: translateX(0px);
+  transition: 0.3s;
+  will-change: transform;
+}
+
+@media (prefers-color-scheme: dark) {
+  .switch {
+    background-image: linear-gradient(
+      to right,
+      var(--switch-left) 0%,
+      var(--switch-right) 100%
+    );
+  }
+
+  .switch::before {
+    background: var(--switch-toggle);
+  }
+}

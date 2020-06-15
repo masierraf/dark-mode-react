@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--base);
+  color: var(--base-tittle);
+}
+
+main {
+  background: var(--base);
+  color: var(--base-tittle);
+}
+
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-1: hsl(37, 97%, 70%);
+  --instagram-2: hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+  --gray: #b9bac7;
+  --card: #f0f3fa;
+  --header: #f0f9fa;
+  --base-tittle: black;
+  --base: white;
+  --switch-toggle: white;
+  --switch-right: #b9bac7;
+  --switch-left: #b9bac7;
+}
+
+/* wrapper */
+.wrapper {
+  padding: 0 30px;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-row-gap: 25px;
+}
+
+.is-dark-mode {
+  --card: #252b43;
+  --header: #1d2029;
+  --gray: #8088ad;
+  --base: #1d2029;
+  --base-tittle: white;
+  --switch-right: #37ce8f;
+  --switch-left: #4796d2;
+  --switch-toggle: #262b3e;
+}
+
+.is-light-mode {
+  --gray: #b9bac7;
+  --card: #f0f3fa;
+  --header: #f0f9fa;
+  --base-tittle: black;
+  --base: white;
+  --switch-toggle: white;
+  --switch-right: #b9bac7;
+  --switch-left: #b9bac7;
+}
+
+@media screen and (min-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--base);
+    color: var(--base-tittle);
+  }
+  :root {
+    --card: #252b43;
+    --header: #1d2029;
+    --gray: #8088ad;
+    --base: #1d2029;
+    --base-tittle: white;
+    --switch-right: #37ce8f;
+    --switch-left: #4796d2;
+    --switch-toggle: #262b3e;
+  }
+}

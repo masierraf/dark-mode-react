@@ -1,0 +1,9 @@
+/* overview */
+
+.overview {
+  padding-bottom: 2em;
+}
+
+.overview h2 {
+  color: var(--gray);
+}

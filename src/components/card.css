@@ -1,0 +1,88 @@
+/* card */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+  text-align: center;
+  padding: 1.7em 0;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.card.facebook:before {
+  background: var(--facebook);
+}
+
+.card.twitter:before {
+  background: var(--twitter);
+}
+
+.card.instagram:before {
+  background-image: linear-gradient(
+    to right,
+    var(--instagram-1) 0%,
+    var(--instagram-2) 100%
+  );
+}
+
+.card.youtube:before {
+  background: var(--youtube);
+}
+
+.card-tittle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.card-tittle-img {
+  margin-right: 5px;
+}
+
+.card-followers {
+}
+
+.card-followers-number {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.card-followers-tittle {
+  display: block;
+  text-transform: uppercase;
+  color: var(--gray);
+  letter-spacing: 5px;
+  font-size: 0.75em;
+}
+
+.card-today {
+  color: var(--lime-green);
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-today img {
+  margin-right: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-followers-title {
+    color: var(--gray);
+  }
+}
